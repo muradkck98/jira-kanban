@@ -1,0 +1,333 @@
+.page {
+  padding: 24px;
+  background: #1D2125;
+  min-height: 100%;
+  color: #B6C2CF;
+}
+
+.loadingPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  gap: 16px;
+  color: #5C6573;
+}
+
+/* ─── Back button ─────────────────────────────────────────────── */
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #5C6573;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+  margin-bottom: 20px;
+  transition: color 0.15s;
+}
+
+.backBtn:hover {
+  color: #579DFF;
+}
+
+/* ─── Epic header ─────────────────────────────────────────────── */
+.epicHeader {
+  background: #22272B;
+  border: 1px solid #2C333A;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.epicHeaderTop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.colorDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.epicName {
+  font-size: 20px;
+  font-weight: 700;
+  color: #B6C2CF;
+  margin: 0;
+}
+
+.editNameBtn {
+  background: transparent !important;
+  border: none !important;
+  color: #5C6573 !important;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.epicHeader:hover .editNameBtn {
+  opacity: 1;
+}
+
+.nameEditRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.nameInput {
+  flex: 1;
+  background: #2C333A;
+  border: 1px solid #579DFF;
+  border-radius: 4px;
+  color: #B6C2CF;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 4px 10px;
+  outline: none;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.statusSelect {
+  min-width: 130px;
+}
+
+.epicDesc {
+  font-size: 13px;
+  color: #5C6573;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.epicDates {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #5C6573;
+}
+
+/* ─── Summary bar ─────────────────────────────────────────────── */
+.summaryBar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.summaryCard {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #22272B;
+  border: 1px solid #2C333A;
+  border-radius: 8px;
+  padding: 12px 18px;
+  min-width: 120px;
+}
+
+.summaryCardWide {
+  flex: 1;
+  min-width: 200px;
+}
+
+.summaryLabel {
+  font-size: 11px;
+  color: #5C6573;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.summaryValue {
+  font-size: 22px;
+  font-weight: 700;
+  color: #B6C2CF;
+}
+
+.summaryProgressRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  margin-top: 4px;
+}
+
+/* ─── Progress bar ────────────────────────────────────────────── */
+.progressBg {
+  flex: 1;
+  height: 8px;
+  background: #2C333A;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  min-width: 0;
+}
+
+.progressPct {
+  font-size: 13px;
+  font-weight: 600;
+  color: #B6C2CF;
+  min-width: 36px;
+  text-align: right;
+}
+
+/* ─── Tasks section ───────────────────────────────────────────── */
+.tasksSection {
+  background: #22272B;
+  border: 1px solid #2C333A;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tasksSectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8C9BAB;
+  padding: 14px 18px;
+  margin: 0;
+  border-bottom: 1px solid #2C333A;
+}
+
+.taskCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 18px;
+  padding: 0 6px;
+  background: #2C333A;
+  border-radius: 9px;
+  font-size: 11px;
+}
+
+.emptyTasks {
+  padding: 40px;
+  text-align: center;
+  color: #5C6573;
+  font-size: 13px;
+}
+
+/* ─── Table ───────────────────────────────────────────────────── */
+.table {
+  display: flex;
+  flex-direction: column;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 100px 1fr 120px 120px 110px 130px 50px;
+  gap: 8px;
+  padding: 8px 18px;
+  background: #1D2125;
+  font-size: 11px;
+  font-weight: 600;
+  color: #5C6573;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 100px 1fr 120px 120px 110px 130px 50px;
+  gap: 8px;
+  padding: 10px 18px;
+  border-top: 1px solid #2C333A;
+  font-size: 13px;
+  color: #B6C2CF;
+  cursor: pointer;
+  transition: background 0.1s;
+  align-items: center;
+}
+
+.tableRow:hover {
+  background: #272E35;
+}
+
+.colKey {
+  font-size: 11px;
+  color: #5C6573;
+  font-family: monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.colTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.colType { overflow: hidden; }
+.colAssignee {
+  font-size: 12px;
+  color: #8C9BAB;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.colPriority { overflow: hidden; }
+.colStatus { overflow: hidden; }
+
+.colSP {
+  font-size: 12px;
+  color: #8C9BAB;
+  text-align: right;
+}
+
+.statusChip {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ─── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .tableHeader,
+  .tableRow {
+    grid-template-columns: 80px 1fr 100px;
+  }
+  .colType,
+  .colAssignee,
+  .colPriority,
+  .colSP {
+    display: none;
+  }
+}

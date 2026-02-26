@@ -1,0 +1,636 @@
+.page {
+  padding: 24px;
+  background: #1D2125;
+  min-height: 100%;
+  color: #B6C2CF;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  gap: 16px;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #B6C2CF;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #5C6573;
+}
+
+.createBtn {
+  background: #0052CC !important;
+  border: none !important;
+  font-size: 13px;
+}
+
+.storyBtn {
+  background: #1C3329 !important;
+  border: 1px solid #36B37E !important;
+  color: #36B37E !important;
+  font-size: 13px;
+}
+
+.storyBtn:hover {
+  background: #254a38 !important;
+}
+
+.labelBtn {
+  background: transparent !important;
+  border: 1px solid #2C333A !important;
+  color: #8C9BAB !important;
+  font-size: 13px;
+}
+
+.labelBtn:hover {
+  border-color: #579DFF !important;
+  color: #579DFF !important;
+}
+
+.reloadBtn {
+  background: transparent !important;
+  border: 1px solid #2C333A !important;
+  color: #8C9BAB !important;
+}
+
+/* ─── Section ─────────────────────────────────────────────────── */
+.section {
+  margin-bottom: 8px;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8C9BAB;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sectionDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.sectionCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 18px;
+  padding: 0 6px;
+  background: #2C333A;
+  border-radius: 9px;
+  font-size: 11px;
+  color: #8C9BAB;
+}
+
+.loadingCenter {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.empty {
+  padding: 32px;
+  color: #5C6573 !important;
+}
+
+/* ─── Epic Card Grid ──────────────────────────────────────────── */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.epicCard {
+  background: #22272B;
+  border: 1px solid #2C333A;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.epicCard:hover {
+  border-color: #3B4754;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cardColorDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cardName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #B6C2CF;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardActions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.deleteBtn {
+  background: transparent !important;
+  border: none !important;
+  color: #5C6573 !important;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.epicCard:hover .deleteBtn {
+  opacity: 1;
+}
+
+.cardDesc {
+  font-size: 12px;
+  color: #5C6573;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: #5C6573;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ─── Progress bar ────────────────────────────────────────────── */
+.progressWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.progressBg {
+  flex: 1;
+  height: 6px;
+  background: #2C333A;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+  min-width: 0;
+}
+
+.progressPct {
+  font-size: 11px;
+  color: #8C9BAB;
+  min-width: 30px;
+  text-align: right;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.viewDetail {
+  font-size: 11px;
+  color: #5C6573;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.epicCard:hover .viewDetail {
+  color: #579DFF;
+}
+
+/* ─── Status badges ───────────────────────────────────────────── */
+.statusBadge {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.status_active {
+  background: #1C3329;
+  color: #36B37E;
+}
+
+.status_planning {
+  background: #1D2633;
+  color: #579DFF;
+}
+
+.status_completed {
+  background: #1C3329;
+  color: #36B37E;
+}
+
+.status_on_hold {
+  background: #2E1A00;
+  color: #FF8B00;
+}
+
+/* ─── Story list ──────────────────────────────────────────────── */
+.storyList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.storyBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.storyRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #22272B;
+  border: 1px solid #2C333A;
+  border-radius: 6px;
+  transition: border-color 0.15s;
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.storyRow:hover {
+  border-color: #3B4754;
+}
+
+.storyRowExpanded {
+  border-color: #3B4754;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-color: #1D2125;
+}
+
+.expandIcon {
+  color: #5C6573;
+  font-size: 10px;
+  flex-shrink: 0;
+  width: 14px;
+}
+
+.epicDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.storyAssignee {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #0052CC;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.noTasks {
+  font-size: 11px;
+  color: #5C6573;
+  font-style: italic;
+}
+
+/* ─── Task list (expanded story) ─────────────────────────────── */
+.taskList {
+  background: #1D2125;
+  border: 1px solid #3B4754;
+  border-top: none;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  padding: 4px 0;
+}
+
+.taskEmpty {
+  padding: 12px 16px;
+  font-size: 12px;
+  color: #5C6573;
+  font-style: italic;
+}
+
+.taskRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px 7px 38px;
+  font-size: 12px;
+  border-bottom: 1px solid #22272B;
+  transition: background 0.1s;
+}
+
+.taskRow:last-child {
+  border-bottom: none;
+}
+
+.taskRow:hover {
+  background: #22272B;
+}
+
+.taskIcon {
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.taskKey {
+  font-size: 10px;
+  color: #5C6573;
+  font-family: monospace;
+  min-width: 72px;
+  flex-shrink: 0;
+}
+
+.taskTitle {
+  flex: 1;
+  color: #B6C2CF;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.taskAssignee {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #6554C0;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.taskStatusBadge {
+  font-size: 9px !important;
+  padding: 0 5px !important;
+}
+
+.taskSP {
+  font-size: 10px;
+  color: #5C6573;
+  flex-shrink: 0;
+  min-width: 32px;
+  text-align: right;
+}
+
+.storyKey {
+  font-size: 11px;
+  color: #5C6573;
+  font-family: monospace;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.storyTitle {
+  flex: 1;
+  color: #B6C2CF;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.storyStatus {
+  flex-shrink: 0;
+}
+
+.storySP {
+  font-size: 11px;
+  color: #8C9BAB;
+  flex-shrink: 0;
+  min-width: 40px;
+  text-align: right;
+}
+
+.storyProgress {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* ─── Modal / Form ────────────────────────────────────────────── */
+.modal :global(.ant-modal-content) {
+  background: #22272B;
+  border: 1px solid #2C333A;
+}
+
+.modal :global(.ant-modal-header) {
+  background: #22272B;
+  border-bottom: 1px solid #2C333A;
+}
+
+.modal :global(.ant-modal-title) {
+  color: #B6C2CF;
+}
+
+.modal :global(.ant-modal-close-icon) {
+  color: #5C6573;
+}
+
+.form :global(.ant-form-item-label label) {
+  color: #8C9BAB;
+  font-size: 13px;
+}
+
+.form :global(.ant-input),
+.form :global(.ant-input-affix-wrapper),
+.form :global(.ant-picker),
+.form :global(.ant-select-selector) {
+  background: #2C333A !important;
+  border-color: #3B4754 !important;
+  color: #B6C2CF !important;
+}
+
+.colorPicker {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.colorSwatch {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.15s, transform 0.1s;
+}
+
+.colorSwatch:hover {
+  transform: scale(1.15);
+}
+
+.colorSwatchActive {
+  border-color: #fff;
+}
+
+.dateRow {
+  display: flex;
+  gap: 12px;
+}
+
+.dateRow :global(.ant-form-item) {
+  margin-bottom: 0;
+}
+
+/* ─── Label Manager ───────────────────────────────────────────── */
+.labelList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: #2C333A;
+  border-radius: 6px;
+  min-height: 38px;
+}
+
+.labelActions {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.labelActionBtn {
+  background: transparent !important;
+  border: none !important;
+  color: #5C6573 !important;
+  padding: 0 4px !important;
+}
+
+.labelActionBtn:hover {
+  color: #B6C2CF !important;
+}
+
+.labelEditRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.labelAddSection {
+  border-top: 1px solid #2C333A;
+  padding-top: 16px;
+}
+
+.labelAddTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #8C9BAB;
+  margin-bottom: 10px;
+}
+
+.labelColorRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.labelColorLabel {
+  font-size: 12px;
+  color: #8C9BAB;
+  flex-shrink: 0;
+}
+
+.colorPickerSmall {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.colorSwatchSm {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.15s, transform 0.1s;
+  flex-shrink: 0;
+}
+
+.colorSwatchSm:hover {
+  transform: scale(1.2);
+}

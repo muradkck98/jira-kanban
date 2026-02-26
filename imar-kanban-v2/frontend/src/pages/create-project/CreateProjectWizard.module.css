@@ -1,0 +1,455 @@
+.wizardPage {
+  min-height: 100vh;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 48px;
+}
+
+.logoText {
+  font-size: 22px;
+  font-weight: 700;
+  color: #172B4D;
+  letter-spacing: -0.5px;
+}
+
+.wizardContent {
+  display: flex;
+  gap: 60px;
+  max-width: 960px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.formSide {
+  flex: 1;
+  max-width: 420px;
+}
+
+.stepTitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: #172B4D;
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.stepSubtitle {
+  font-size: 15px;
+  color: #6B778C;
+  margin: 0 0 24px;
+}
+
+/* Issue type selection */
+.typeList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.typeOption {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 2px solid #DFE1E6;
+  border-radius: 8px;
+  background: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: left;
+  width: 100%;
+}
+
+.typeOption:hover {
+  border-color: #4C9AFF;
+}
+
+.typeOptionSelected {
+  border-color: #0052CC;
+  background: #F4F8FF;
+}
+
+.typeIcon {
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: #F4F5F7;
+  flex-shrink: 0;
+}
+
+.typeInfo {
+  flex: 1;
+}
+
+.typeName {
+  font-size: 15px;
+  font-weight: 600;
+  color: #172B4D;
+}
+
+.typeDesc {
+  font-size: 13px;
+  color: #6B778C;
+  margin-top: 2px;
+}
+
+.typeCheck {
+  color: #0052CC;
+  font-size: 16px;
+}
+
+/* Status editing */
+.statusList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.statusRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusInput {
+  flex: 1;
+}
+
+.removeStatusBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #6B778C;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.removeStatusBtn:hover {
+  background: #FFEBE6;
+  color: #FF5630;
+}
+
+.addStatusBtn {
+  border: 2px dashed #DFE1E6;
+  border-radius: 6px;
+  padding: 8px 16px;
+  background: transparent;
+  color: #0052CC;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  margin-top: 4px;
+}
+
+.addStatusBtn:hover {
+  border-color: #4C9AFF;
+  background: #F4F8FF;
+}
+
+/* Name form */
+.nameForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #172B4D;
+  margin-bottom: 6px;
+}
+
+.note {
+  font-size: 13px;
+  color: #97A0AF;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.nextBtn {
+  min-width: 100px;
+}
+
+.btnRow {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* Preview side */
+.previewSide {
+  flex: 1;
+  max-width: 480px;
+  position: relative;
+}
+
+.previewCard {
+  background: #FFFFFF;
+  border: 1px solid #DFE1E6;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(9, 30, 66, 0.12), 0 0 0 3px #0052CC, 0 0 0 6px #FFAB00;
+  transform: perspective(800px) rotateY(-3deg);
+}
+
+.previewHeader {
+  padding: 16px 20px 0;
+}
+
+.previewProjectName {
+  font-size: 15px;
+  font-weight: 700;
+  color: #172B4D;
+  margin-bottom: 12px;
+}
+
+.previewTabs {
+  display: flex;
+  gap: 16px;
+  border-bottom: 2px solid #DFE1E6;
+  padding-bottom: 8px;
+}
+
+.previewTab {
+  font-size: 13px;
+  color: #6B778C;
+}
+
+.previewTabActive {
+  font-size: 13px;
+  color: #0052CC;
+  font-weight: 600;
+  border-bottom: 2px solid #0052CC;
+  margin-bottom: -10px;
+  padding-bottom: 8px;
+}
+
+/* Preview board */
+.previewBoard {
+  display: flex;
+  gap: 8px;
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.previewColumn {
+  min-width: 100px;
+  flex: 1;
+}
+
+.previewColHeader {
+  font-size: 10px;
+  font-weight: 700;
+  color: #6B778C;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.previewCardPlaceholder {
+  height: 40px;
+  background: #F4F5F7;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+/* Preview list */
+.previewList {
+  padding: 12px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.previewListRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: #F4F5F7;
+  border-radius: 4px;
+}
+
+.previewListIcon {
+  font-size: 14px;
+}
+
+.previewListBar {
+  height: 8px;
+  background: #DFE1E6;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.previewListBarShort {
+  height: 8px;
+  background: #DFE1E6;
+  border-radius: 4px;
+  width: 60px;
+}
+
+/* Step indicator */
+.stepIndicator {
+  display: flex;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.stepDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #DFE1E6;
+  transition: background 0.2s;
+}
+
+.stepDotActive {
+  background: #0052CC;
+}
+
+/* Step Bar */
+.stepBar {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 40px;
+  max-width: 960px;
+  width: 100%;
+}
+
+.stepBarItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.stepCircle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #DFE1E6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6B778C;
+  flex-shrink: 0;
+  background: #fff;
+  transition: all 0.2s;
+}
+
+.stepCircleActive {
+  border-color: #0052CC;
+  color: #0052CC;
+  background: #F4F8FF;
+}
+
+.stepCircleDone {
+  border-color: #36B37E;
+  background: #36B37E;
+  color: #fff;
+}
+
+.stepBarLabel {
+  font-size: 12px;
+  color: #97A0AF;
+  white-space: nowrap;
+}
+
+.stepBarLabelActive {
+  color: #0052CC;
+  font-weight: 600;
+}
+
+.stepBarLine {
+  flex: 1;
+  height: 2px;
+  background: #DFE1E6;
+  margin: 0 8px;
+}
+
+.stepBarLineDone {
+  background: #36B37E;
+}
+
+/* Invite */
+.inviteRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.inviteInput {
+  flex: 1;
+}
+
+.roleSelect {
+  width: 130px;
+}
+
+.invitedList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.invitedRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #F4F8FF;
+  border: 1px solid #CCE0FF;
+  border-radius: 6px;
+}
+
+.invitedEmail {
+  flex: 1;
+  font-size: 13px;
+  color: #172B4D;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.removeInviteBtn {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #6B778C;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.removeInviteBtn:hover {
+  background: #FFEBE6;
+  color: #FF5630;
+}

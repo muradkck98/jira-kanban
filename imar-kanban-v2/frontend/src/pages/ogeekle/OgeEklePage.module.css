@@ -1,0 +1,146 @@
+.page {
+  padding: 32px 36px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.header {
+  margin-bottom: 28px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #B6C2CF;
+  margin: 0 0 6px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #8C9BAB;
+  margin: 0;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+/* Card */
+.card {
+  background: #22272B;
+  border: 1px solid #2C333A;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  background: #272E35;
+  transform: translateY(-2px);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardIcon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.cardBadge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 10px;
+  letter-spacing: 0.05em;
+}
+
+.cardLabel {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.cardDescription {
+  font-size: 13px;
+  color: #B6C2CF;
+  margin: 0;
+  font-weight: 500;
+}
+
+.cardDetail {
+  font-size: 12px;
+  color: #8C9BAB;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.examplesBox {
+  background: #1D2125;
+  border: 1px solid #2C333A;
+  border-radius: 6px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.examplesTitle {
+  font-size: 10px;
+  font-weight: 700;
+  color: #5E6C84;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.exampleItem {
+  font-size: 11px;
+  color: #8C9BAB;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.cardFooter {
+  margin-top: auto;
+  padding-top: 6px;
+  border-top: 1px solid #2C333A;
+}
+
+.createBtn {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}

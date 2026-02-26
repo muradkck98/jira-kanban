@@ -1,0 +1,474 @@
+/* ─── Page ────────────────────────────────────────────────────────────────── */
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 28px 16px;
+  border-bottom: 1px solid #2C333A;
+  flex-shrink: 0;
+}
+
+.pageHeaderIcon {
+  font-size: 28px;
+  color: #579DFF;
+}
+
+.pageTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #B6C2CF;
+}
+
+.pageSubtitle {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #8C9BAB;
+}
+
+/* ─── Layout ──────────────────────────────────────────────────────────────── */
+.layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ─── Settings Nav ────────────────────────────────────────────────────────── */
+.settingsNav {
+  width: 200px;
+  flex-shrink: 0;
+  padding: 16px 8px;
+  border-right: 1px solid #2C333A;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow-y: auto;
+}
+
+.settingsNavItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  color: #8C9BAB;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+  text-align: left;
+  transition: background 0.15s, color 0.15s;
+}
+
+.settingsNavItem:hover {
+  background: #22272B;
+  color: #B6C2CF;
+}
+
+.settingsNavItemActive {
+  background: #1C3454 !important;
+  color: #579DFF !important;
+}
+
+.settingsNavDanger {
+  color: #FF5630 !important;
+  margin-top: auto;
+}
+
+.settingsNavDanger:hover {
+  background: #2C1A18 !important;
+  color: #FF5630 !important;
+}
+
+.settingsNavIcon {
+  font-size: 15px;
+  width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ─── Content ─────────────────────────────────────────────────────────────── */
+.settingsContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.tabContent {
+  padding: 28px 32px;
+  max-width: 780px;
+}
+
+/* ─── Section ─────────────────────────────────────────────────────────────── */
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #B6C2CF;
+  margin: 0 0 6px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.sectionDesc {
+  font-size: 13px;
+  color: #8C9BAB;
+  margin: 0 0 20px;
+}
+
+/* ─── Form ────────────────────────────────────────────────────────────────── */
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8C9BAB;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.input {
+  background: #22272B !important;
+  border-color: #2C333A !important;
+  color: #B6C2CF !important;
+}
+
+.input input,
+.input textarea {
+  background: transparent !important;
+  color: #B6C2CF !important;
+}
+
+.hint {
+  font-size: 11px;
+  color: #5E6C84;
+}
+
+/* ─── Info Card ───────────────────────────────────────────────────────────── */
+.infoCard {
+  background: #22272B;
+  border: 1px solid #2C333A;
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.infoLabel {
+  font-size: 12px;
+  color: #8C9BAB;
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.infoValue {
+  font-size: 12px;
+  color: #B6C2CF;
+  font-family: monospace;
+}
+
+/* ─── Save Button ─────────────────────────────────────────────────────────── */
+.saveBtn {
+  margin-top: 8px;
+}
+
+.addBtn {
+  background: transparent !important;
+  border-color: #579DFF !important;
+  color: #579DFF !important;
+  font-size: 12px;
+}
+
+/* ─── Member List ─────────────────────────────────────────────────────────── */
+.memberList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.memberRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: #22272B;
+  margin-bottom: 4px;
+  border: 1px solid #2C333A;
+}
+
+.memberInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.memberName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #B6C2CF;
+}
+
+.memberEmail {
+  font-size: 11px;
+  color: #8C9BAB;
+}
+
+.roleSelect {
+  width: 130px;
+}
+
+.removeBtn {
+  opacity: 0.6;
+}
+
+.removeBtn:hover {
+  opacity: 1;
+}
+
+.roleDesc {
+  font-size: 12px;
+  color: #8C9BAB;
+  margin: 0 0 6px;
+}
+
+/* ─── Workflow ────────────────────────────────────────────────────────────── */
+.workflowList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.workflowStep {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #22272B;
+  border: 1px solid #2C333A;
+  border-radius: 6px;
+}
+
+.stepIndex {
+  font-size: 11px;
+  color: #5E6C84;
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.stepColorDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.workflowInput {
+  flex: 1;
+  background: #1D2125 !important;
+  border-color: #2C333A !important;
+  color: #B6C2CF !important;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+.categorySelect {
+  width: 140px;
+}
+
+/* ─── Issue Types ─────────────────────────────────────────────────────────── */
+.issueTypeList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.issueTypeCard {
+  background: #22272B;
+  border: 1px solid #2C333A;
+  border-radius: 8px;
+  padding: 14px 18px;
+  transition: border-color 0.15s;
+}
+
+.issueTypeCard:hover {
+  border-color: #3D4B57;
+}
+
+.issueTypeHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.issueTypeIcon {
+  font-size: 18px;
+}
+
+.issueTypeName {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.issueTypeDesc {
+  padding-left: 26px;
+}
+
+.descLine {
+  font-size: 12px;
+  color: #8C9BAB;
+  margin: 2px 0;
+  line-height: 1.6;
+}
+
+.editForm {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #2C333A;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.editRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.editLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: #8C9BAB;
+  text-transform: uppercase;
+}
+
+.editInput {
+  background: #1D2125 !important;
+  border-color: #2C333A !important;
+  color: #B6C2CF !important;
+}
+
+.editInput textarea {
+  background: transparent !important;
+  color: #B6C2CF !important;
+}
+
+/* ─── Notifications ───────────────────────────────────────────────────────── */
+.notifList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 20px;
+}
+
+.notifRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #22272B;
+  border: 1px solid #2C333A;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.notifInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.notifTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #B6C2CF;
+}
+
+.notifDesc {
+  font-size: 12px;
+  color: #8C9BAB;
+}
+
+/* ─── Danger Zone ─────────────────────────────────────────────────────────── */
+.dangerCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border: 1px solid #3D2B28;
+  border-radius: 8px;
+  background: #1D2125;
+  margin-bottom: 12px;
+  gap: 20px;
+}
+
+.dangerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dangerTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #FF5630;
+}
+
+.dangerDesc {
+  font-size: 12px;
+  color: #8C9BAB;
+}
+
+/* ─── Add Member Row ──────────────────────────────────────────────────────── */
+.addMemberRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+/* ─── Add Type Row ────────────────────────────────────────────────────────── */
+.addTypeRow {
+  border-top: 1px solid #2C333A;
+  padding-top: 16px;
+  margin-top: 20px;
+}

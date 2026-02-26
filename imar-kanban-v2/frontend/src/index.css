@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Jira Blue Palette */
+  --jira-blue-50: #DEEBFF;
+  --jira-blue-100: #B3D4FF;
+  --jira-blue-200: #4C9AFF;
+  --jira-blue-300: #2684FF;
+  --jira-blue-400: #0065FF;
+  --jira-blue-500: #0052CC;
+  --jira-blue-600: #0747A6;
+
+  /* Neutrals (light) */
+  --jira-N0: #FFFFFF;
+  --jira-N10: #FAFBFC;
+  --jira-N20: #F4F5F7;
+  --jira-N30: #EBECF0;
+  --jira-N40: #DFE1E6;
+  --jira-N50: #C1C7D0;
+  --jira-N60: #B3BAC5;
+  --jira-N80: #97A0AF;
+  --jira-N100: #7A869A;
+  --jira-N200: #6B778C;
+  --jira-N300: #5E6C84;
+  --jira-N400: #505F79;
+  --jira-N500: #42526E;
+  --jira-N700: #253858;
+  --jira-N800: #172B4D;
+  --jira-N900: #091E42;
+
+  /* Semantic */
+  --jira-green: #36B37E;
+  --jira-green-light: #E3FCEF;
+  --jira-yellow: #FFAB00;
+  --jira-yellow-light: #FFFAE6;
+  --jira-red: #FF5630;
+  --jira-red-light: #FFEBE6;
+  --jira-purple: #6554C0;
+  --jira-teal: #00B8D9;
+
+  /* Dark theme (Jira Dark Mode) */
+  --dk-bg-surface: #1D2125;
+  --dk-bg-overlay: #22272B;
+  --dk-bg-card: #282E33;
+  --dk-bg-input: #22272B;
+  --dk-border: #2C333A;
+  --dk-border-bold: #38414A;
+  --dk-text: #B6C2CF;
+  --dk-text-subtle: #8C9BAB;
+  --dk-text-disabled: #5E6C84;
+  --dk-text-heading: #DEE4EA;
+  --dk-link: #579DFF;
+  --dk-icon: #8C9BAB;
+  --dk-accent-blue: #579DFF;
+  --dk-accent-green: #4BCE97;
+  --dk-accent-red: #F87462;
+  --dk-accent-yellow: #F5CD47;
+  --dk-accent-purple: #9F8FEF;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Dark mode default */
+  color: var(--dk-text);
+  background: var(--dk-bg-surface);
+  font-size: 14px;
+  line-height: 1.42857;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--dk-border-bold);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dk-text-disabled);
+}
+
+::selection {
+  background: rgba(87, 157, 255, 0.3);
+}
+
+a {
+  color: var(--dk-link);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--dk-accent-blue);
+  text-decoration: underline;
+}

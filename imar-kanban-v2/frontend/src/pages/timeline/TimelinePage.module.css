@@ -1,0 +1,249 @@
+.page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid #2C333A;
+}
+
+.toolbarLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toolbarRight {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.searchInput {
+  background: #22272B !important;
+  border-color: #2C333A !important;
+}
+
+.searchInput input {
+  background: transparent !important;
+  color: #B6C2CF !important;
+}
+
+.filterBtn {
+  background: transparent !important;
+  border-color: #2C333A !important;
+  color: #B6C2CF !important;
+  font-size: 13px !important;
+}
+
+.iconBtn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: #8C9BAB;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBtn:hover {
+  background: #282E33;
+}
+
+.timelineContainer {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.issuePanel {
+  width: 400px;
+  min-width: 400px;
+  border-right: 1px solid #2C333A;
+  overflow-y: auto;
+  background: #1D2125;
+}
+
+.issuePanelHeader {
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #8C9BAB;
+  border-bottom: 1px solid #2C333A;
+  position: sticky;
+  top: 0;
+  background: #1D2125;
+  z-index: 2;
+  height: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.issueRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-bottom: 1px solid #2C333A;
+  height: 40px;
+}
+
+.typeIcon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.issueTitle {
+  font-size: 13px;
+  color: #B6C2CF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.addIssueRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 2px solid #579DFF;
+  border-radius: 4px;
+  margin: 4px 8px;
+  height: 36px;
+  background: #22272B;
+}
+
+.addIcon {
+  font-size: 14px;
+}
+
+.addText {
+  font-size: 13px;
+  color: #8C9BAB;
+  flex: 1;
+}
+
+.ganttPanel {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+}
+
+.ganttHeader {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #1D2125;
+  border-bottom: 1px solid #2C333A;
+  height: 38px;
+}
+
+.monthHeader {
+  font-size: 13px;
+  font-weight: 600;
+  color: #B6C2CF;
+  text-align: center;
+  padding: 10px 0;
+  border-right: 1px solid #2C333A;
+  flex-shrink: 0;
+}
+
+.ganttBody {
+  position: relative;
+  min-height: 100%;
+}
+
+.monthGrid {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-right: 1px solid #2C333A;
+}
+
+.todayLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #579DFF;
+  z-index: 3;
+}
+
+.barRow {
+  height: 40px;
+  position: relative;
+  border-bottom: 1px solid #2C333A;
+}
+
+.ganttBar {
+  position: absolute;
+  top: 8px;
+  height: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.ganttBar:hover {
+  opacity: 0.85;
+}
+
+.barLabel {
+  font-size: 11px;
+  color: #1D2125;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+}
+
+.bottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px 20px;
+  border-top: 1px solid #2C333A;
+  background: #1D2125;
+}
+
+.viewControls {
+  display: flex;
+  gap: 2px;
+  background: #282E33;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.viewBtn {
+  padding: 4px 12px;
+  border: none;
+  background: transparent;
+  color: #8C9BAB;
+  font-size: 13px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.viewBtn:hover {
+  color: #B6C2CF;
+}
+
+.viewBtnActive {
+  background: #579DFF;
+  color: #1D2125;
+  font-weight: 600;
+}

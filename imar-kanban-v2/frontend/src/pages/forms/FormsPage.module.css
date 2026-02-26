@@ -1,0 +1,518 @@
+/* ─── Page Layout ─────────────────────────────────────────────────────────── */
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: #1D2125;
+}
+
+/* ─── Page Header ─────────────────────────────────────────────────────────── */
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px 12px;
+  border-bottom: 1px solid #2C333A;
+  flex-shrink: 0;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pageHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pageHeaderIcon {
+  font-size: 24px;
+  color: #579DFF;
+}
+
+.pageTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #B6C2CF;
+  line-height: 1.2;
+}
+
+.pageSubtitle {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #5E6C84;
+  line-height: 1.3;
+}
+
+.pageHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ─── Tab Buttons ─────────────────────────────────────────────────────────── */
+.tabBtns {
+  display: flex;
+  gap: 2px;
+  background: #22272B;
+  border: 1px solid #2C333A;
+  border-radius: 6px;
+  padding: 3px;
+}
+
+.tabBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #8C9BAB;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.tabBtn:hover {
+  background: #2C333A;
+  color: #B6C2CF;
+}
+
+.tabBtnActive {
+  background: #282E33;
+  color: #B6C2CF;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.pendingBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  font-size: 11px;
+  font-weight: 700;
+  background: #FF5630;
+  color: #fff;
+  border-radius: 9px;
+}
+
+/* ─── Form Tab ────────────────────────────────────────────────────────────── */
+.formWrapper {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formCard {
+  width: 100%;
+  max-width: 680px;
+  background: #22272B;
+  border: 1px solid #2C333A;
+  border-radius: 10px;
+  padding: 28px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #2C333A;
+}
+
+.formCardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: #1C3454;
+  border: 1px solid #2C4A6A;
+  border-radius: 10px;
+}
+
+.formCardTitle {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #B6C2CF;
+}
+
+/* ─── Form Fields ─────────────────────────────────────────────────────────── */
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fieldRow {
+  display: flex;
+  gap: 16px;
+}
+
+@media (max-width: 520px) {
+  .fieldRow {
+    flex-direction: column;
+  }
+}
+
+.fieldLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: #8C9BAB;
+  margin: 0;
+}
+
+.required {
+  color: #FF5630;
+}
+
+.fieldInput {
+  background: #1D2125 !important;
+  border-color: #2C333A !important;
+  color: #B6C2CF !important;
+  border-radius: 6px !important;
+}
+
+.fieldInput:focus,
+.fieldInput:focus-within {
+  border-color: #579DFF !important;
+  box-shadow: 0 0 0 2px rgba(87, 157, 255, 0.15) !important;
+}
+
+.fieldInput::placeholder {
+  color: #5E6C84 !important;
+}
+
+.fieldInputError {
+  border-color: #FF5630 !important;
+}
+
+.fieldInputError:focus,
+.fieldInputError:focus-within {
+  box-shadow: 0 0 0 2px rgba(255, 86, 48, 0.15) !important;
+}
+
+.fieldSelect {
+  width: 100%;
+}
+
+.errorMsg {
+  font-size: 12px;
+  color: #FF5630;
+  margin-top: 2px;
+}
+
+/* ─── Type Grid ───────────────────────────────────────────────────────────── */
+.typeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 10px;
+}
+
+.typeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 8px;
+  background: #1D2125;
+  border: 2px solid #2C333A;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, transform 0.1s;
+  text-align: center;
+}
+
+.typeCard:hover {
+  border-color: #579DFF;
+  background: #1a2a3a;
+  transform: translateY(-1px);
+}
+
+.typeCardIcon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.typeCardLabel {
+  font-size: 11px;
+  font-weight: 500;
+  color: #8C9BAB;
+  line-height: 1.2;
+}
+
+/* ─── Submit Button ───────────────────────────────────────────────────────── */
+.submitBtn {
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* ─── Success Screen ──────────────────────────────────────────────────────── */
+.successScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 48px 32px;
+  gap: 12px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.successIcon {
+  font-size: 56px;
+  color: #36B37E;
+}
+
+.successTitle {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #B6C2CF;
+}
+
+.successDesc {
+  margin: 0;
+  font-size: 14px;
+  color: #5E6C84;
+  line-height: 1.6;
+}
+
+.successActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ─── Submissions Tab ─────────────────────────────────────────────────────── */
+.submissionsWrapper {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.submissionsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.submissionsCount {
+  font-size: 13px;
+  color: #5E6C84;
+}
+
+.submissionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ─── Submission Card ─────────────────────────────────────────────────────── */
+.submissionCard {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #22272B;
+  border: 1px solid #2C333A;
+  border-radius: 8px;
+  transition: border-color 0.15s;
+}
+
+.submissionCard:hover {
+  border-color: #3D4B57;
+}
+
+.statusAcceptedCard {
+  border-left: 3px solid #36B37E;
+}
+
+.statusRejectedCard {
+  border-left: 3px solid #FF5630;
+}
+
+.submissionLeft {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.submissionTypeIcon {
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.submissionInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  flex: 1;
+}
+
+.submissionTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #B6C2CF;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.submissionDesc {
+  font-size: 12px;
+  color: #5E6C84;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.submissionMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.submissionBy {
+  font-size: 11px;
+  color: #579DFF;
+  font-weight: 500;
+}
+
+.submissionDate {
+  font-size: 11px;
+  color: #5E6C84;
+}
+
+/* ─── Submission Right (actions) ──────────────────────────────────────────── */
+.submissionRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.statusPending {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #FFAB00;
+  font-weight: 500;
+}
+
+.statusAccepted {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #36B37E;
+  font-weight: 500;
+}
+
+.statusRejected {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #FF5630;
+  font-weight: 500;
+}
+
+/* ─── Empty State ─────────────────────────────────────────────────────────── */
+.emptySubmissions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 60px 20px;
+  color: #5E6C84;
+  font-size: 14px;
+}
+
+/* ─── Attachment Strip in submission card ─────────────────────────────────── */
+.attachStrip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.attachThumb {
+  width: 48px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #2C333A;
+  cursor: pointer;
+  transition: opacity 0.15s, border-color 0.15s;
+}
+
+.attachThumb:hover {
+  opacity: 0.85;
+  border-color: #579DFF;
+}
+
+.attachFileLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #579DFF;
+  text-decoration: none;
+  padding: 2px 6px;
+  border: 1px solid #2C3A4A;
+  border-radius: 4px;
+  background: #1C3454;
+  white-space: nowrap;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.attachFileLink:hover {
+  border-color: #579DFF;
+  color: #A8C9FF;
+}
+
+.attachMore {
+  font-size: 11px;
+  color: #8C9BAB;
+  background: #22272B;
+  border: 1px solid #2C333A;
+  border-radius: 10px;
+  padding: 1px 6px;
+}

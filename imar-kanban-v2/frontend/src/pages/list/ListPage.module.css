@@ -1,0 +1,330 @@
+.page {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  gap: 12px;
+  border-bottom: 1px solid #2C333A;
+}
+
+.toolbarLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toolbarRight {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  width: 140px;
+  background: #22272B !important;
+  border-color: #2C333A !important;
+}
+
+.searchInput input {
+  background: transparent !important;
+  color: #B6C2CF !important;
+}
+
+.filterBtn {
+  background: transparent !important;
+  border-color: #2C333A !important;
+  color: #B6C2CF !important;
+}
+
+.filterBtn:hover {
+  border-color: #579DFF !important;
+  color: #579DFF !important;
+}
+
+.savedFilters {
+  font-size: 13px;
+  color: #8C9BAB;
+}
+
+/* Table */
+.tableContainer {
+  flex: 1;
+  overflow: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1100px;
+}
+
+.table thead th {
+  text-align: left;
+  padding: 8px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8C9BAB;
+  background: #1D2125;
+  border-bottom: 1px solid #2C333A;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.thCheckbox {
+  width: 32px;
+}
+
+.checkbox {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #5E6C84;
+  border-radius: 3px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.checkbox:checked {
+  background: #0052CC;
+  border-color: #0052CC;
+}
+
+.row {
+  transition: background 0.1s;
+}
+
+.row:hover {
+  background: #22272B;
+}
+
+.row td {
+  padding: 6px 10px;
+  border-bottom: 1px solid #2C333A;
+  font-size: 13px;
+  color: #B6C2CF;
+  vertical-align: middle;
+}
+
+.tdCheckbox {
+  width: 32px;
+}
+
+.issueCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.expandBtn {
+  color: #5E6C84;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.issueTypeIcon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.issueKey {
+  color: #579DFF;
+  font-weight: 500;
+  font-size: 12px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.issueKey:hover {
+  text-decoration: underline;
+}
+
+.issueTitle {
+  color: #B6C2CF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.personCell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.unassigned {
+  color: #8C9BAB;
+  font-size: 13px;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.statusSelect :global(.ant-select-selector) {
+  background: transparent !important;
+  border-color: #2C333A !important;
+  color: #B6C2CF !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.03em !important;
+  height: 22px !important;
+  padding: 0 6px !important;
+}
+
+.statusSelect :global(.ant-select-selection-item) {
+  line-height: 20px !important;
+  font-size: 11px !important;
+}
+
+.resolution {
+  color: #8C9BAB;
+  font-size: 12px;
+}
+
+.dateCell {
+  font-size: 12px;
+  color: #8C9BAB;
+  white-space: nowrap;
+}
+
+.moreBtn {
+  border: none;
+  background: transparent;
+  color: #8C9BAB;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 3px;
+}
+
+.moreBtn:hover {
+  background: #2C333A;
+}
+
+.tableFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-top: 1px solid #2C333A;
+}
+
+.createRowBtn {
+  border: none;
+  background: transparent;
+  color: #579DFF;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+.createRowBtn:hover {
+  background: #22272B;
+}
+
+.countLabel {
+  font-size: 12px;
+  color: #8C9BAB;
+}
+
+/* Filter active state */
+.filterBtnActive {
+  border-color: #579DFF !important;
+  color: #579DFF !important;
+}
+
+.filterBadge {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #579DFF;
+}
+
+/* Export button */
+.exportBtn {
+  background: transparent !important;
+  border-color: #36B37E !important;
+  color: #36B37E !important;
+}
+
+.exportBtn:hover {
+  border-color: #57d9a3 !important;
+  color: #57d9a3 !important;
+}
+
+/* Filter Panel */
+.filterPanel {
+  display: flex;
+  gap: 24px;
+  padding: 12px 20px;
+  background: #1D2125;
+  border-bottom: 1px solid #2C333A;
+  flex-wrap: wrap;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 140px;
+}
+
+.filterGroupTitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: #8C9BAB;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.filterLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 13px;
+  color: #B6C2CF;
+  gap: 4px;
+}
+
+/* Group row */
+.groupRow td {
+  background: #22272B;
+  padding: 6px 10px;
+  border-bottom: 1px solid #2C333A;
+}
+
+.groupLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #B6C2CF;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.groupCount {
+  margin-left: 8px;
+  font-size: 11px;
+  color: #8C9BAB;
+  background: #2C333A;
+  padding: 1px 6px;
+  border-radius: 10px;
+}

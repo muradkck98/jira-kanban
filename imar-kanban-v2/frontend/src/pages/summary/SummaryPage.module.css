@@ -1,0 +1,274 @@
+.page {
+  padding: 24px 32px;
+  max-width: 1200px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.card {
+  background: #1D2125;
+  border: 1px solid #2C333A;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.cardHeader {
+  margin-bottom: 16px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #B6C2CF;
+  margin: 0 0 4px;
+}
+
+.cardSubtitle {
+  font-size: 12px;
+  color: #8C9BAB;
+}
+
+.link {
+  color: #579DFF;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Donut chart */
+.donutContainer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.donutSvg {
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+}
+
+.donutLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.legendLabel {
+  font-size: 13px;
+  color: #B6C2CF;
+}
+
+/* Activity */
+.activityList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.activityItem {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.activityContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.activityText {
+  font-size: 13px;
+  color: #B6C2CF;
+  line-height: 1.5;
+}
+
+.activityIssueKey {
+  color: #579DFF;
+  font-weight: 500;
+}
+
+.activityBadge {
+  display: inline-block;
+  padding: 1px 6px;
+  background: #0052CC;
+  color: #FFFFFF;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0 2px;
+}
+
+.activityTime {
+  font-size: 11px;
+  color: #8C9BAB;
+}
+
+/* Bar chart */
+.barChart {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.barRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.barTrack {
+  flex: 1;
+  height: 28px;
+  background: #2C333A;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  border-radius: 3px;
+  min-width: 2px;
+  transition: width 0.3s;
+}
+
+.barLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.barLabel {
+  font-size: 11px;
+  color: #8C9BAB;
+}
+
+/* Type table */
+.typeTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.typeTable th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8C9BAB;
+  padding: 6px 0;
+  border-bottom: 1px solid #2C333A;
+}
+
+.typeTable td {
+  padding: 8px 0;
+  border-bottom: 1px solid #2C333A;
+  color: #B6C2CF;
+  font-size: 13px;
+}
+
+.typeCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.typeIcon {
+  font-size: 14px;
+}
+
+.typePctRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.typePct {
+  font-size: 13px;
+  color: #B6C2CF;
+  min-width: 36px;
+}
+
+.typePctBar {
+  flex: 1;
+  height: 8px;
+  background: #2C333A;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.typePctFill {
+  height: 100%;
+  background: #579DFF;
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+
+/* Workload */
+.workloadTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.workloadTable th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8C9BAB;
+  padding: 6px 0;
+  border-bottom: 1px solid #2C333A;
+}
+
+.workloadTable td {
+  padding: 8px 0;
+  border-bottom: 1px solid #2C333A;
+}
+
+.assigneeCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #B6C2CF;
+  font-size: 13px;
+}
+
+/* Epic empty */
+.epicEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 0;
+  gap: 16px;
+}
+
+.epicIcons {
+  display: flex;
+  gap: 4px;
+}
+
+.epicBlock {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+}

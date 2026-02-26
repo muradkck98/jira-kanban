@@ -1,0 +1,179 @@
+.page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid #2C333A;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.monthTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #DEE4EA;
+  margin: 0;
+  min-width: 180px;
+  text-align: center;
+}
+
+.navBtn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #2C333A;
+  background: #22272B;
+  color: #B6C2CF;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBtn:hover {
+  background: #282E33;
+  color: #DEE4EA;
+}
+
+.todayBtn {
+  padding: 4px 12px;
+  border: 1px solid #2C333A;
+  background: #22272B;
+  color: #579DFF;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+.todayBtn:hover {
+  background: #282E33;
+}
+
+/* Day Headers */
+.dayHeaders {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-bottom: 1px solid #2C333A;
+}
+
+.dayHeader {
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #8C9BAB;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  flex: 1;
+  overflow-y: auto;
+}
+
+.cell {
+  min-height: 100px;
+  border-right: 1px solid #2C333A;
+  border-bottom: 1px solid #2C333A;
+  padding: 4px;
+  background: #1D2125;
+}
+
+.cell:nth-child(7n) {
+  border-right: none;
+}
+
+.cellOtherMonth {
+  background: #161A1D;
+  opacity: 0.5;
+}
+
+.cellToday {
+  background: #1C2B41;
+}
+
+.cellDate {
+  font-size: 12px;
+  color: #8C9BAB;
+  padding: 2px 4px;
+  font-weight: 500;
+}
+
+.cellDateToday {
+  color: #579DFF;
+  font-weight: 700;
+  background: #0052CC;
+  color: #fff;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Issue chips */
+.cellIssues {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 2px;
+}
+
+.issueChip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  background: #22272B;
+  border-left: 3px solid #579DFF;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.issueChip:hover {
+  background: #282E33;
+}
+
+.chipIcon {
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
+.chipTitle {
+  font-size: 11px;
+  color: #B6C2CF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.moreCount {
+  font-size: 10px;
+  color: #579DFF;
+  padding: 1px 4px;
+  cursor: pointer;
+}
+
+.moreCount:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,71 @@
+.boardPage {
+  padding: 24px 28px 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.boardHeader {
+  margin-bottom: 16px;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: #8C9BAB;
+  margin-bottom: 4px;
+}
+
+.breadcrumbLink {
+  color: #8C9BAB;
+  cursor: pointer;
+}
+
+.breadcrumbLink:hover {
+  color: #579DFF;
+  text-decoration: underline;
+}
+
+.breadcrumbSep {
+  margin: 0 6px;
+  color: #5E6C84;
+}
+
+.boardTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #DEE4EA;
+  margin: 0;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  border-radius: 3px;
+}
+
+.avatarGroup {
+  display: flex;
+  align-items: center;
+}
+
+.columnsContainer {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  align-items: flex-start;
+}

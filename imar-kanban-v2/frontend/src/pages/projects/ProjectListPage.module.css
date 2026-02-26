@@ -1,0 +1,139 @@
+.page {
+  padding: 32px 40px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #DEE4EA;
+  margin: 0;
+}
+
+.toolbar {
+  margin-bottom: 20px;
+}
+
+/* Table */
+.tableContainer {
+  border: 1px solid #2C333A;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead th {
+  text-align: left;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #8C9BAB;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: #22272B;
+  border-bottom: 1px solid #2C333A;
+}
+
+.sectionRow td {
+  padding: 12px 12px 4px;
+  background: #22272B;
+}
+
+.sectionLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: #8C9BAB;
+  letter-spacing: 0.08em;
+}
+
+.row {
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.row:hover {
+  background: #282E33;
+}
+
+.row td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #2C333A;
+  font-size: 14px;
+  color: #B6C2CF;
+  vertical-align: middle;
+}
+
+.starBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 0;
+}
+
+.starBtn:hover {
+  background: #282E33;
+}
+
+.projectCell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.projectAvatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #F87462, #FF5630);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.projectName {
+  font-weight: 500;
+  color: #579DFF;
+}
+
+.projectName:hover {
+  text-decoration: underline;
+}
+
+.keyBadge {
+  font-size: 12px;
+  color: #8C9BAB;
+}
+
+.typeBadge {
+  font-size: 13px;
+  color: #B6C2CF;
+}
