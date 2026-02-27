@@ -2,7 +2,9 @@
 
 A full-stack Jira-inspired Kanban board built with NestJS, Next.js (React), and PostgreSQL. Supports multi-user real-time collaboration with polling-based sync.
 
-![Kanban Board](docs/screenshot.png)
+![Kanban Board]
+<img width="2000" height="983" alt="image" src="https://github.com/user-attachments/assets/7182676d-a985-4d21-8ea6-c9ff952a0c20" />
+
 
 ---
 
